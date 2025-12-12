@@ -35,19 +35,19 @@ The program also uses:
 
 BankAccount is an abstract class that represents a generic bank account.
 It contains an abstract method:
-
+```java
 public abstract void withdraw(double amount);
-
+```
 
 This forces subclasses to create their own withdrawal rules.
 
 ### 2. Inheritance
 
 SavingsAccount and CheckingAccount both extend BankAccount:
-
+```java
 class SavingsAccount extends BankAccount { ... }
 class CheckingAccount extends BankAccount { ... }
-
+```
 
 Both children inherit attributes and methods from the parent.
 
