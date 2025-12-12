@@ -95,7 +95,7 @@ enum AccountType { SAVINGS, CHECKING }
 ## 🖥 How the Program Works
 ### 1. User enters:
 
-Name
+- Name
 
 - Account number
 
@@ -141,5 +141,55 @@ Account Type Selected: SAVINGS
 3. Check Balance
 4. Print Account Details
 5. Exit
-Choose an option:
+Choose an option: 1 
+Enter deposit amount: 500
+Deposited: 500.0
+
+------ BANK MENU ------
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Print Account Details
+5. Exit
+Choose an option: 3
+Current Balance: 5500.0
+
+------ BANK MENU ------
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Print Account Details
+5. Exit
+Choose an option: 2
+Enter withdrawal amount: 500
+Savings Withdrawal: 500.0
+
+------ BANK MENU ------
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Print Account Details
+5. Exit
+Choose an option: 3
+Current Balance: 5000.0
+
+------ BANK MENU ------
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Print Account Details
+5. Exit
+Choose an option: 4
+
+--- Savings Account Details ---
+Owner: Adrian Santiago
+Account Number: 12345
+Balance: 5000.0
+
+------ BANK MENU ------
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Print Account Details
+5. Exit
 ```
