@@ -62,11 +62,11 @@ Two types used:
 ```java
 @Override
 public void withdraw(double amount)
-
-Compile-time Polymorphism (Overloading)
+```
+- Compile-time Polymorphism (Overloading)
 
 Deposit method is overloaded:
-
+```java
 public void deposit(double amount);
 public void deposit(double amount, String note);
 ```
