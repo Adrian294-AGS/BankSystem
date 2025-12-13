@@ -1,29 +1,18 @@
 package studentmanagement;
 
-public class Student extends Person implements Evaluatable {
+// Inheritance: Student Inherits the Person or the superClass
+public class Student extends Person  {
     // Encapsulation: private attributes
     private GradeLevel level;
     // 2D array: grades[term][subject]
     private int[][] grades;
 
-    // Parameterized constructor (Constructor overloading #2)
+    // Parameterized constructor (Constructor overloading)
     public Student(String name, int id, GradeLevel level, int terms, int subjects) {
         super(name, id); // use super() in constructor
         this.level = level;
+        super.grades = new int[terms][subjects];
         this.grades = new int[terms][subjects];
-    }
-
-    // Getters and setters (Encapsulation)
-    public GradeLevel getLevel() {
-        return level;
-    }
-
-    public void setLevel(GradeLevel level) {
-        this.level = level;
-    }
-
-    public int[][] getGrades() {
-        return grades;
     }
 
     // Methods with parameters
@@ -34,13 +23,9 @@ public class Student extends Person implements Evaluatable {
         }
     }
 
-    public int getSubjectCount() {
-        return grades.length > 0 ? grades[0].length : 0;
-    }
-
     // implemeting abstract method
     public String displayInfo() {
-        return "Student[name=" + getName() + ", id=" + getId() + ", level=" + level + "]";
+        return "Student[name=" + super.getName() + ", id=" + super.getId() + ", level=" + level + "]";
     }
 
     // Interface method: returns a value
@@ -58,16 +43,5 @@ public class Student extends Person implements Evaluatable {
         return count == 0 ? 0.0 : (double) sum / count;
     }
 
-    // Another method with parameters and return
-    public double computeTermAverage(int termIndex) {
-        if (termIndex < 0 || termIndex >= grades.length) return 0.0;
-        int sum = 0;
-        int count = 0;
-        for (int subj = 0; subj < grades[termIndex].length; subj++) {
-            sum += grades[termIndex][subj];
-            count++;
-        }
-        return count == 0 ? 0.0 : (double) sum / count;
-    }
 }
 
