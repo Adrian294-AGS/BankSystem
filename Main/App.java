@@ -15,6 +15,7 @@ public class App {
         int n = sc.nextInt();
         sc.nextLine(); // consume newline
 
+        // Polymorphism: array of Person references to Student objects
         Person[] students = new Student[n];
 
         // ===== FOR loop with Scanner input =====
@@ -28,7 +29,8 @@ public class App {
             System.out.print("Grade Level (FIRST_YEAR, SECOND_YEAR, THIRD_YEAR, FOURTH_YEAR): ");
             String levelStr = sc.nextLine();
             GradeLevel level = GradeLevel.valueOf(levelStr.toUpperCase());
-
+            
+           // Create Student object
             students[i] = new Student(name, id, level, terms, subjects);
 
             // Fill grades interactively
@@ -70,6 +72,8 @@ public class App {
 
         // ===== Show averages =====
         System.out.println("\n=== Student Averages ===");
+
+        // Polymorphism in action: computeGrade() behaves differently based on actual object type
         for (Person s : students) {
             System.out.printf("%s's overall average: %.2f%n", s.getName(), s.computeGrade());
         }

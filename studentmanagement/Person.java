@@ -1,5 +1,6 @@
 package studentmanagement;
 
+// Abstract class Person implementing Evaluatable interface
 public abstract class Person implements Evaluatable{
     // Encapsulation: private attributes
     private String name;
@@ -17,6 +18,7 @@ public abstract class Person implements Evaluatable{
         return name;
     }
 
+    // Getter for ID
     public int getId() {
         return id;
     }
@@ -29,6 +31,7 @@ public abstract class Person implements Evaluatable{
         }
     }
 
+    // Implementation of computeGrade from Evaluatable interface
     public double computeGrade() {
         int sum = 0;
         int count = 0;
@@ -39,6 +42,7 @@ public abstract class Person implements Evaluatable{
                 count++;
             }
         }
+        // Return average grade
         return count == 0 ? 0.0 : (double) sum / count;
     }
     // Object method using object data

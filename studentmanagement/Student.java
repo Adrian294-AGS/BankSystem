@@ -24,6 +24,7 @@ public class Student extends Person  {
     }
 
     // implemeting abstract method
+    // Object method using object data
     public String displayInfo() {
         return "Student[name=" + super.getName() + ", id=" + super.getId() + ", level=" + level + "]";
     }
@@ -40,6 +41,8 @@ public class Student extends Person  {
                 count++;
             }
         }
+
+        // Return average grade
         return count == 0 ? 0.0 : (double) sum / count;
     }
 
